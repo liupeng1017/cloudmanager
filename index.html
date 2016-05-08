@@ -17,7 +17,7 @@
     <div class="wrapper">
       <header>
         <h1 class="header">Funiture</h1>
-        <p class="header">前后台技术实践，spring maven mybatis redis rabbitmq 权限管理 服务降级</p>
+        <p class="header">前后台技术实践，spring maven mybatis redis rabbitmq 权限管理 服务降级 qps限制 quartz动态调整</p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/kanwangzjm/funiture/zipball/master">Download ZIP</a></li>
@@ -59,17 +59,23 @@
 <ul>
 <li>通用的 spring 框架搭建</li>
 <li>maven 管理 jar 包</li>
+<li>系统全局配置维护, 能实时刷新内存中最新配置</li>
 <li>通用的权限管理系统 - 通过角色维护用户和权限之间的关系
 
 <ul>
 <li>正常的部门、用户、角色、权限点、权限模块维护</li>
-<li>部门树、权限模块树、用户权限树、角色权限树展示</li>
+<li>部门树、权限模块树、用户权限树、角色权限树展示及维护</li>
 <li>操作记录查询、还原操作</li>
 <li>根据配置记录动态渲染后台菜单</li>
 <li>根据配置记录拦截请求的url</li>
 </ul>
 </li>
-<li>验证码生成及校验</li>
+<li>系统监控, 内存、CPU、线程状态、GC情况等</li>
+<li>系统服务降级, 临时禁止某些url请求及切流量放行</li>
+<li>QPS全局控制</li>
+<li>系统定时任务调度(Quartz)管理, 动态开启、关闭及调整调度等</li>
+<li>执行系统shell命令</li>
+<li>验证码生成、校验</li>
 <li>redis等缓存使用, 控制台管理
 
 <ul>
@@ -77,25 +83,23 @@
 <li><a href="https://code.google.com/archive/p/phpmemcacheadmin/">phpmemcacheadmin</a></li>
 </ul>
 </li>
-<li>系统配置动态加载及更新</li>
 <li>logback, email通知异常</li>
-<li>mybatis, sql监控(sql中异常, 返回大量行)</li>
-<li>线程池使用, 异步回调</li>
+<li>mybatis, sql监控(sql中异常, 返回行过多等)</li>
+<li>线程池使用, 异步回调, 抛弃请求监控等</li>
 <li>json(jackson)序列化与反序列化</li>
 <li>通用邮件配置及发送</li>
 <li>文件上传与管理，md5 计算</li>
 <li>httpClient 封装, 按需指定各项参数</li>
 <li>cookie 管理</li>
 <li>excel XSSFWorkbook(大数据量)使用, 相关报表导出</li>
-<li>quartz 定时任务</li>
 <li>hibernate validator校验</li>
 <li>threadLocal 管理进程信息, 按需使用</li>
 <li>Junit 测试</li>
 <li>RabbitMQ 队列, 生产-消费, 控制台管理</li>
-<li>zookeeper client</li>
-<li>支持多数据源, 根据需要切换数据库</li>
-<li>支持 aop</li>
-<li>短链接服务, 生成\跳转</li>
+<li>zookeeper client 封装</li>
+<li>支持多个数据源(aop切面里确定连接串), 根据需要切换数据库</li>
+<li>短链接服务, 生成、跳转及过期处理</li>
+<li>支持请求使用代理, 及动态选择代理</li>
 </ul>
       </section>
       <footer>
