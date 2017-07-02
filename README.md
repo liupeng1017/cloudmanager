@@ -5,8 +5,8 @@
 * Maven 管理jar包
 * Mysql 数据库存储
 * Tomcat 运行用服务器
-* Redis 非必须, 缓存用, 可在配置中打开
-* Rabbit 非必须, 队列用, 可在配置打开
+* Redis 非必须, 缓存用, 可在配置中调整
+* Rabbit 非必须, 队列用, 可在配置条横
 * Zookeeper 非必须, 可在配置中打开
 * Lombok, 需要开发环境(IDEA或eclipse)支持
 
@@ -34,7 +34,7 @@
 * 系统定时任务调度(Quartz)管理, 动态开启、关闭、调整调度及执行开始结束状态监控
 * 执行系统shell命令
 * 验证码生成、校验
-* redis等缓存使用
+* redis缓存使用
 * logback, email通知异常
 * mybatis, sql监控(sql中异常, 返回行过多等)
 * 线程池使用, 异步回调, 抛弃请求监控等
@@ -58,6 +58,7 @@
 * 强烈建议使用Intellij IDEA作为开发工具，eclipse需要手动做些设置才能正常使用, 项目启动要加载Resources包括：resources和resource.dev(或prod,区分环境选择）
 * 项目中log基本都使用@Slf4j提供，需要开发工具支持Lombok插件，相关注解包括：@Getter，@Setter，@ToString，@AllArgsConstuctor, @NoArgsConstructor,@Builder
 * 前台页面是从别的网站扒下来的，没任何价值，建议直接访问 /admin/page.do（目前默认跳转这个地址） 进入后台, 用户的密码只是普通做了md5加密，登录细节参考LoginServlet.java里实现
+* 如果不想使用redis，可以手动调整一下代码：applicationContext.xml、RedisPool.java、SysCacheService.java 里注掉掉redis的配置和spring管理
 * sql重新给了一下,直接导出本地的数据库表及数据, 可使用kanwangzjm@gmail.com/123456登录
 * 个别功能只适合单机，比如动态修改quartz调度、qps控制等
 * 如有问题，可加微信沟通，个人微信号：kanwangzjm，添加时请注明来自github

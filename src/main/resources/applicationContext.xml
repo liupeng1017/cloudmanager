@@ -17,9 +17,8 @@
             </list>
         </property>
     </bean>
-    <!--
-        <import resource="spring-redis.xml"/>
-    -->
+
+    <import resource="spring-redis.xml"/>
     <!--
     <import resource="spring-rabbit.xml"/>
     -->
