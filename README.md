@@ -6,7 +6,7 @@
 * Mysql 数据库存储
 * Tomcat 运行用服务器
 * Redis 非必须, 缓存用, 可在配置中调整
-* Rabbit 非必须, 队列用, 可在配置条横
+* Rabbit 非必须, 队列用, 可在配置中调整
 * Zookeeper 非必须, 可在配置中打开
 * Lombok, 需要开发环境(IDEA或eclipse)支持
 
