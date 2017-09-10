@@ -1,1 +1,1 @@
-Redis: http://redis.cn/commands.html/usr/local/bin/redis-server/usr/local/bin/redis-cliZookeeper:zkServer startzkServer stopRabbitmq:sudo rabbitmq-serverrabbitmqctl list_queues管理台: http://localhost:15672/
+Redis: http://redis.cn/commands.html/usr/local/bin/redis-server/usr/local/bin/redis-cliZookeeper:zkServer startzkServer stopRabbitmq:sudo rabbitmq-serverrabbitmqctl list_queues管理台: http://localhost:15672/find . -name "*.java" | xargs perl -pi -e 's/\r\n|\n|\r/\n/g'
