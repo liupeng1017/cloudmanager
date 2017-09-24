@@ -1,7 +1,7 @@
 package com.app.mvc.common;
 
+import com.app.mvc.beans.JsonData;
 import com.app.mvc.beans.JsonMapper;
-import com.app.mvc.beans.Result;
 import com.app.mvc.config.GlobalConfig;
 import com.app.mvc.config.GlobalConfigKey;
 import lombok.extern.slf4j.Slf4j;
@@ -74,7 +74,7 @@ public class AllUrlFilter implements Filter {
         if (contentType.equals("text/html")) {
             clientRedirect(response, noAuthPage);
         } else if (contentType.equals("application/json")) {
-            Result result = Result.fail("服务降级,请稍后再试");
+            JsonData result = JsonData.error("服务降级,请稍后再试");
             response.getWriter().print(JsonMapper.obj2String(result));
         } else {
             clientRedirect(response, noAuthPage);

@@ -1,7 +1,7 @@
 package com.app.mvc.captcha;
 
+import com.app.mvc.beans.JsonData;
 import com.app.mvc.beans.JsonMapper;
-import com.app.mvc.beans.Result;
 import com.app.mvc.common.SpringHelper;
 import com.app.mvc.config.GlobalConfig;
 import com.app.mvc.config.GlobalConfigKey;
@@ -69,7 +69,7 @@ public class CaptchaFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) resp;
         String contentType = "application/json";
         response.setHeader("Content-Type", contentType + "; charset=UTF-8");
-        Result result = Result.fail("验证码错误!");
+        JsonData result = JsonData.error("验证码错误!");
         response.getWriter().print(JsonMapper.obj2String(result));
     }
 

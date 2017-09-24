@@ -1,5 +1,8 @@
 package com.app.mvc.beans;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class JsonData {
 
     private final boolean ret;
@@ -20,6 +23,14 @@ public class JsonData {
         JsonData result = new JsonData(true);
         result.data = object;
         result.msg = msg;
+        return result;
+    }
+
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<String, Object>();
+        result.put("ret", ret);
+        result.put("msg", msg);
+        result.put("data", data);
         return result;
     }
 

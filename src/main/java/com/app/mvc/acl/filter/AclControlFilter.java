@@ -3,8 +3,8 @@ package com.app.mvc.acl.filter;
 import com.app.mvc.acl.domain.SysUser;
 import com.app.mvc.acl.service.SysCoreService;
 import com.app.mvc.acl.util.RequestHolder;
+import com.app.mvc.beans.JsonData;
 import com.app.mvc.beans.JsonMapper;
-import com.app.mvc.beans.Result;
 import com.app.mvc.common.SpringHelper;
 import com.app.mvc.config.GlobalConfig;
 import com.app.mvc.config.GlobalConfigKey;
@@ -109,7 +109,7 @@ public class AclControlFilter implements Filter {
         if (contentType.equals("text/html")) {
             clientRedirect(response, noAuthPage);
         } else if (contentType.equals("application/json")) {
-            Result result = Result.fail("没有访问权限，如需要访问，请联系管理员！");
+            JsonData result = JsonData.error("没有访问权限，如需要访问，请联系管理员！");
             response.getWriter().print(JsonMapper.obj2String(result));
         } else {
             clientRedirect(response, noAuthPage);
