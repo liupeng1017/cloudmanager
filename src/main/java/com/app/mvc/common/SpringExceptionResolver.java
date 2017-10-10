@@ -21,10 +21,7 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
         ModelAndView mv;
         String msg = "system error";
 
-        if (ex instanceof NotFoundException) {
-            JsonData result = JsonData.error(ex.getMessage());
-            mv = new ModelAndView("exception", result.toMap());
-        } else if (url.endsWith(JSON_URI)) {
+        if (url.endsWith(JSON_URI)) {
             if (ex instanceof RuntimeException) {
                 JsonData result = JsonData.error(ex.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());

@@ -275,9 +275,9 @@
                 open: function (event, ui) {
                     $(".ui-dialog-titlebar-close", $(this).parent()).hide(); // 点开时隐藏关闭按钮
                     optionStr = "";
-                    recursiveRenderAclModule(deptList, 1);
-                    $("#aclModuleSelectId").html(optionStr);
+                    recursiveRenderAclModuleSelect(aclModuleList, 1);
                     $("#aclForm")[0].reset();
+                    $("#aclModuleSelectId").html(optionStr);
                 },
                 buttons: {
                     "添加": function (e) {

@@ -41,24 +41,16 @@
 <body>
 
 <div class="container">
-
     <form class="form-signin" action="/login.do?ret=<%=ret%>" method="post">
         <h2 class="form-signin-heading">请登陆</h2>
         <label for="inputEmail" class="sr-only">邮箱</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="username" required autofocus value="${username}">
         <label for="inputPassword" class="sr-only">密码</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required >
-
-        <!--<div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> 记住我
-          </label>
-        </div> -->
         <div class="checkbox" style="color: red;">${error}</div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登 陆</button>
     </form>
-
-</div> <!-- /container -->
+</div>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/ie10-viewport-bug-workaround.js"></script>

@@ -148,60 +148,6 @@
                     </li>
                 </ul>
             </li>
-
-            <li class="">
-                <a href="index.html#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-desktop"></i>
-                    <span class="menu-text"> 展示管理 </span>
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a class="popstyle" href="" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            轮播图
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <li class="">
-                        <a class="popstyle" href="" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            产品管理
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                    <li class="">
-                        <a class="popstyle" href="" target="_blank">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            文章管理
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
-
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa menu-icon fa fa-flask "></i>
-                    <span class="menu-text"> 相关报表 </span>
-
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="javascript:void(0)" class="direct" data-value="http://www.baidu.com">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            test
-                        </a>
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
         </ul>
         <!-- /.nav-list -->
 
