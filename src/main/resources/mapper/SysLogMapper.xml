@@ -33,9 +33,10 @@
         <include refid="sysLogColumns"/>
         FROM sys_log
         <include refid="queryConditions"/>
+        ORDER BY id DESC
         limit #{page.offset},#{page.pageSize}
     </select>
-    <select id="countFuzzySearch" resultType="SysLog" parameterType="map">
+    <select id="countFuzzySearch" resultType="int" parameterType="map">
         SELECT COUNT(1)
         FROM sys_log
         <include refid="queryConditions"/>
@@ -47,14 +48,14 @@
             <if test="dto.type != null">
                 AND type = #{dto.type}
             </if>
-            <if test="dto.old_value != null and dto.old_value != ''">
-                AND old_value like '%' || #{dto.beforeSeq} || '%'
+            <if test="dto.beforeSeg != null and dto.beforeSeg != ''">
+                AND old_value like #{dto.beforeSeg}
             </if>
-            <if test="dto.new_value != null and dto.new_value != ''">
-                AND new_value like '%' || #{dto.afterSeg} || '%'
+            <if test="dto.afterSeg != null and dto.afterSeg != ''">
+                AND new_value like #{dto.afterSeg}
             </if>
             <if test="dto.operator != null and dto.operator != ''">
-                AND operator = #{dto.operator}
+                AND operator like #{dto.operator}
             </if>
             <if test="dto.fromTime != null">
                 AND operate_time &gt;= #{dto.fromTime}

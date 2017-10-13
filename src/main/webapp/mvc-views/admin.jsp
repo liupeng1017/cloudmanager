@@ -119,6 +119,13 @@
                         </a>
                         <b class="arrow"></b>
                     </li>
+                    <li class="">
+                        <a class="popstyle" href="/sys/log/page.do" target="_blank">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            更新历史
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
                 </ul>
             </li>
 

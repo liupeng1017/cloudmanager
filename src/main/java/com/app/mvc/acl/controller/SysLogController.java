@@ -42,6 +42,12 @@ public class SysLogController {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/list.json")
+    public JsonData list(LogPara para, PageQuery page) {
+        PageResult<SysLog> list = sysLogService.getPageByFuzzySearch(para, page);
+        return JsonData.success(list);
+    }
+    @ResponseBody
     @RequestMapping(value = "/query.json")
     public JsonData getDept(@RequestParam("id") int id) {
         return JsonData.success(sysLogService.findById(id));

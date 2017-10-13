@@ -4,9 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.security.MessageDigest;
 
-/**
- * Created by jimin on 15/11/22.
- */
 @Slf4j
 public class MD5Util {
 
@@ -34,9 +31,5 @@ public class MD5Util {
             log.error("generate md5 error, {}", s, e);
             return null;
         }
-    }
-
-    public static void main(String[] args) {
-        log.info(encrypt("123456"));
     }
 }
