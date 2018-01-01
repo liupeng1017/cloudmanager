@@ -57,7 +57,8 @@
 * sql重新给了一下,直接导出本地的数据库表及数据, 可使用kanwangzjm@gmail.com/123456登录
 * 个别功能只适合单机，比如动态修改quartz调度、qps控制等
 * 如有问题，可加微信沟通，个人微信公众号：TechDevPro
-![avatar](https://github.com/kanwangzjm/funiture/blob/master/qrcode_344.jpg)
+
+![avatar](https://github.com/kanwangzjm/funiture/blob/master/qrcode_258.jpg)
 
 ## 近期计划
 * 在之前切库的基础上, 做动态切库(分库)操作
