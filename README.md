@@ -56,7 +56,11 @@
 * 如果不想使用redis，可以手动调整一下代码：applicationContext.xml、RedisPool.java、SysCacheService.java 里注掉掉redis的配置和spring管理
 * sql重新给了一下,直接导出本地的数据库表及数据, 可使用kanwangzjm@gmail.com/123456登录
 * 个别功能只适合单机，比如动态修改quartz调度、qps控制等
-* 如有问题，可加微信沟通，个人微信公众号：TechDevPro
+* 个人在线课程：[Java开发企业级权限管理系统](http://coding.imooc.com/class/149.html))，地址：http://coding.imooc.com/class/149.html ，欢迎关注
+
+![course](https://github.com/kanwangzjm/funiture/blob/master/course.jpg)
+
+* 如有问题，可加微信沟通，个人微信公众号：TechDevPro ，课程里一些技术讲解会在公众号
 
 ![avatar](https://github.com/kanwangzjm/funiture/blob/master/qrcode_258.jpg)
 
@@ -64,3 +68,5 @@
 * 在之前切库的基础上, 做动态切库(分库)操作
 * mybatis层的分表操作, 借助org.shardbatis包的com.google.code.shardbatis.plugin.ShardPlugin
 * 完成主备操作, 借助org.apache.curator包选择zk leader
+
+
