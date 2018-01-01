@@ -373,7 +373,7 @@
             // 处理点击[删除部门]按钮
             $(".dept-delete").click(function (e) {
                 e.preventDefault();
-                e.stopPropagation(); // 此处必须要取消冒泡,因为是个递归结构,冒泡的话会让一个点击被响应多个
+                e.stopPropagation();
                 var deptId = $(this).attr("data-id");
                 var deptName = $(this).attr("data-name");
                 if (confirm("确定要删除部门[" + deptName + "]吗?")) {

@@ -42,11 +42,13 @@ public class SQLMonitorInterceptor implements Interceptor {
             long start = System.currentTimeMillis();
             Object e = invocation.proceed();
             long end = System.currentTimeMillis();
+
+            // 定义慢sql，输出
             if (end - start > GlobalConfig.getLongValue(GlobalConfigKey.SLOW_QUERY_MILLSECONDS, 2000)) {
                 sql = mappedStatement.getBoundSql(parameter).getSql();
                 log.warn("Slow SQL {} millis. sql: {}. parameter: {}", end - start, sql, this.toJson(parameter));
             }
-
+            // 定义大结果集，输出
             if (e instanceof Collection && ((Collection) e).size() > GlobalConfig.getIntValue(GlobalConfigKey.SQL_LIST_COUNT, 50)) {
                 log.warn("SQL ResultSet {} {} {}  ", mappedStatement.getResource(), mappedStatement.getId(), Integer.valueOf(((Collection) e).size()));
             }

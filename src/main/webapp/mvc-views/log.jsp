@@ -1,9 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <jsp:include page="../common/backend_common.jsp"/>
-    <jsp:include page="../common/page.jsp"/>
+    <jsp:include page="/common/backend_common.jsp"/>
+    <jsp:include page="/common/page.jsp"/>
 </head>
 <body class="no-skin" youdao="bind" style="background: white">
 <input id="gritter-light" checked="" type="checkbox" class="ace ace-switch ace-switch-5"/>
@@ -120,12 +119,12 @@
         $(".research").click(function (e) {
             e.preventDefault();
             loadLogList();
-        })
+        });
 
         function loadLogList() {
             var pageSize = $("#pageSize").val();
             var pageNo = $("#logPage .pageNo").val() || 1;
-            var url = "/sys/log/list.json";
+            var url = "/sys/log/page.json";
             var beforeSeg = $("#search-before").val();
             var afterSeg = $("#search-after").val();
             var operator = $("#search-operator").val();
@@ -160,13 +159,13 @@
                             return function (text, render) {
                                 var typeStr = "";
                                 switch (this.type) {
-                                    case 1: typeStr = "权限点";break;
-                                    case 2: typeStr = "权限模块";break;
-                                    case 3: typeStr = "用户";break;
-                                    case 4: typeStr = "部门";break;
+                                    case 1: typeStr = "部门";break;
+                                    case 2: typeStr = "用户";break;
+                                    case 3: typeStr = "权限模块";break;
+                                    case 4: typeStr = "权限点";break;
                                     case 5: typeStr = "角色";break;
-                                    case 6: typeStr = "角色用户关系";break;
-                                    case 7: typeStr = "角色权限关系";break;
+                                    case 6: typeStr = "角色权限关系";break;
+                                    case 7: typeStr = "角色用户关系";break;
                                     default: typeStr = "未知";
                                 }
                                 return typeStr;
